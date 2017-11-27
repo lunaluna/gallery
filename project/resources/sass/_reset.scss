@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+/*!
+*** based on ***
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	word-break: break-all;
+	word-break: break-word;
+	hyphens: auto;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+/* HTML5 display-role reset for older browsers */
+address, article, aside, figure, figcaption, footer,
+header, hgroup, hr, legend, main, menu, nav, section, summary {
+	display: block;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+	&:before, &:after {
+		content: '';
+		content: none;
+	}
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #cccccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+// input, select {
+// 	vertical-align: middle;
+// }
+
+
+/*** 2015.07.15 追記 ***/
+
+// borderの幅
+*,
+::before,
+::after {
+	// border-style: solid;
+	// border-width: 0;
+}
+
+// ボックスモデルに「border-box」をデフォルトで適用
+* {
+	box-sizing: border-box;
+}
+
+// webkitデフォルトのフォームのスタイルをキャンセル
+html {
+	-webkit-appearance: none;
+}
+
+// webkitデフォルトのテキストサイズ調整をキャンセル
+body {
+	-webkit-text-size-adjust: 100%;
+}
+
+// buttonのデフォルトスタイルをキャンセル
+button {
+	display: inline-block;
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+// smallタグのデフォルトサイズを変更
+small {
+	font-size: 75%; // All browsers
+}
+
+
+/*** 2015.07.28 追記 ***/
+
+[hidden] {
+	display: none;
+}
+
+mark {
+	background: none;
+}
+
+em {
+	font-style: normal;
+}
+
+input {
+	opacity: 1;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+
+/*** 2016.10.31 追記 ***/
+address {
+	font-style: normal;
+}

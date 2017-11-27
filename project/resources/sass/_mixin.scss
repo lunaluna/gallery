@@ -1,0 +1,69 @@
+@charset "utf-8";
+//使用する場合は@include borderBox; のように記述
+
+//clearfix 使用する場合は
+//任意のセレクタ { @include clearfix; } のように記述する
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+//グラデーションのカスタマイズ $topにグラデーショントップの色、$afterにボトムの色を指定
+// $top : グラデーションのトップの色
+// $bottom : グラデーションのボトムの色;
+@mixin custom-gradient( $top, $bottom ) {
+	background-image: -webkit-gradient(linear, left top, left bottom, from($top), to($bottom));
+	background-image: linear-gradient($top, $bottom);
+}
+
+//ボックスシャドウ
+@mixin boxShadow($right-left,$down-left,$blur,$spread,$color,$inset : null ) {
+	-webkit-box-shadow: $right-left $down-left $blur $spread $color $inset;
+	        box-shadow: $right-left $down-left $blur $spread $color $inset;
+}
+
+//border-raduis
+@mixin borderRadius($top-left,$top-right,$bottom-right,$bottom-left){
+	-webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+	        border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+
+@function floor-decimal ($number, $digits: 0) {
+	@return to-fixed($number, $digits, 'floor');
+}
+
+//hover時の透過
+// ** マウスオーバーで透過 **
+// $ratio : 透過する割合（0～1の間で指定）
+@mixin opacity($ratio :0.7) {
+	opacity: $ratio;
+}
+
+@mixin no-opacity {
+	opacity: 100%;
+}
+
+// ** 文字サイズ出力 **
+
+// レスポンシブな文字サイズ
+// $fontsize : デザイン上の文字サイズ
+// $designwidth : デザインのウィンドウ幅
+@mixin vwfont( $fontsize, $designwidth:768px ) {
+	font-size: ( $fontsize / $designwidth ) * 100vw;
+}
+
+// レスポンシブな画像のサイズ指定
+@mixin fluidimage() {
+	width: 100%;
+	height: auto;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+サイト固有の追加項目
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+

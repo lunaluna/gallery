@@ -1,0 +1,116 @@
+// variable definition
+
+$text-color       : #000;
+$font-size        : 16px;
+
+$text-title       : #231815;
+$text-sub         : #666;
+
+// ** font marugo **
+
+
+/* font-face
+************************************/
+@font-face {
+	font-family: 'NotoSans';
+	font-style: normal;
+	font-weight: 400;
+	src: url(./fonts/NotoSansCJKjp-Regular.otf);
+	src: url(./fonts/NotoSansCJKjp-Regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'NotoSansBold';
+	font-style: normal;
+	font-weight: 700;
+	src: url(./fonts/NotoSansCJKjp-Bold.otf);
+	src: url(./fonts/NotoSansCJKjp-Bold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'YuGothic M';
+	src: local('Yu Gothic Medium');
+}
+
+@font-face {
+	font-family: 'YuMincho M';
+	src: local('Yu Mincho Medium');
+}
+
+$font-family      : NotoSans, '游ゴシック体', YuGothic, 'YuGothic M', '游ゴシック', 'Yu Gothic', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$serif            : '游明朝体', YuMincho, 'YuMincho M', '游明朝', 'Yu Mincho', 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', 'HiraMinProN-W3', 'HGS明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+
+@mixin bold {
+	font-family: NotoSansBold, $font-family;
+	font-weight: 700;
+}
+
+@mixin cinema {
+	font-family: 'Cinema Letter', $font-family;
+	font-weight: 400;
+}
+
+$line-height      : 1.616;
+
+$key-color        : #014099;
+// $main-color       : #1e2541;
+$link-color       : #4e7b53;
+// $active-color     : #41a62a;
+// $hover-color      : #41a62a;
+$bg-color         : #fff;
+// $wrapper-color    : #fff;
+// $border-color     : #cfcfcf;
+// $menu-color       : #014099;
+$pickup-color     : #693;
+
+$text-mind        : #693;
+$text-staff       : #1a5299;
+$text-creative    : #39c;
+$text-service     : #c96;
+
+$color-mind       : #9c3;
+// $color-mind       : #6cc;
+// $color-staff      : #1a5299;
+$color-staff      : #5299cc;
+// $color-creative   : #39c;
+$color-creative       : #6cc;
+$color-service    : #cc6;
+
+$border-mind      : #9c3;
+$border-staff     : #1a5299;
+$border-creative  : #39c;
+$border-service   : #c96;
+
+$color-manager    : #693;
+$color-director   : #39c;
+$color-designer   : #c96;
+
+$news-manager     : #9c3;
+$news-director    : #6cc;
+$news-designer    : #cc6;
+
+$image-path       : "./images/";
+
+$sp-width         : 768px; // スマホのブレイクポイント
+$tb-width         : 992px; // タブレットのブレイクポイント
+$content-width    : 1280px; // メインコンテンツの最大幅
+$max-width        : 1920px; // デザイン上の最大幅
+
+
+/* font-size
+************************************/
+// $size : 文字サイズ
+// $font-size : サイトのbodyに指定した文字サイズ
+@mixin fontsize($size: $font-size) {
+	font-size: $size;
+	font-size: ($size / 16px) * 1rem;
+}
+
+
+/* 画面サイズに連動して可変するレスポンシブなfont-size
+************************************/
+// $fontsize : 文字サイズ
+// $designwidth : デザイン上の文字サイズ
+@mixin vwfont($fontsize,$designwidth:768px) {
+	font-size: ($fontsize / $designwidth) * 100vw;
+}
