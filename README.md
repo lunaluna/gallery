@@ -36,8 +36,7 @@ $ npm start
 
 # SPECIFICATION
 - for WP theme basement
-- include bootstrap v3.3.6
+- php v7.0.23
+- node v8.9.1
 
 ## changelog
-
-2017.01.19 first commit v.1.0.0 for wp4.6.1
